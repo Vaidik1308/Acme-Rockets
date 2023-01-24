@@ -15,7 +15,7 @@
                 <button id="mobile-open-button" class=" text-3xl sm:hidden focus:outline-none ">&#9776</button>
                 <nav class=" hidden sm:block space-x-8 " aria-label="main">
                     <a class=" hover:opacity-90 " href="#rockets">Our Rockets</a>
-                    <a class=" hover:opacity-90 " href="#Testimonials">Testimonials</a>
+                    <a class=" hover:opacity-90 " href="#testimonial">Testimonials</a>
                     <a class=" hover:opacity-90 " href="#contact">Contact</a>
                 </nav>
             </div>
@@ -68,14 +68,52 @@
         
         <hr class=" mx-auto bg-black dark: bg-white w-1/2 ">
 
-        <section id="testimonial" class=" p-6 my-12 ">
+        <section id="testimonial" class=" p-6 my-12 scroll-my-20">
             <h2 class=" text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white ">Testimonial</h2>
+            <figure class=" my-12  ">
+                <blockquote class=" bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
+                    <p class=" text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 ">
+                        One individual may die for an idea, but that idea will, after his death, incarnate itself in a thousand lives.
+                    </p>
+                    <figcaption class=" italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400 ">
+                        &#8212; Subhash Chandra Bose
+                    </figcaption>
+                </blockquote>
+            </figure>
+            <figure class=" my-12  ">
+                <blockquote class=" bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
+                    <p class=" text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 ">
+                        Life loses half its interest if there is no struggle – if there are no risks to be taken.
+                    </p>
+                    <figcaption class=" italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400 ">
+                        &#8212; Subhash Chandra Bose
+                    </figcaption>
+                </blockquote>
+            </figure>
+            <figure class=" my-12  ">
+                <blockquote class=" bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
+                    <p class=" text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 ">
+                        Acme always been there for me. Their Explore rocket arrived in a wooden crate as expected. Life-long customer! A++ shopping experience.
+                    </p>
+                    <figcaption class=" italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400 ">
+                        &#8212; Subhash Chandra Bose
+                    </figcaption>
+                </blockquote>
+            </figure>
         </section>
 
         <hr class=" mx-auto bg-black dark: bg-white w-1/2 ">
 
         <section id="contact" class=" p-6 my-12 ">
             <h2 class=" text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white ">Contact Us</h2>
+            <form action="" class=" max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4 ">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required minlength="3" maxlength="60" placeholder="Your Subject" class=" w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none  ">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10"
+                 placeholder="Your Message" class=" w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none  "></textarea>
+                 <button class=" bg-teal-700 hover:bg-teal-600 active:bg-teal-500 text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none ">Submit</button>
+            </form>
         </section>
     </main>
 </body>

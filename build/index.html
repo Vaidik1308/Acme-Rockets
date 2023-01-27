@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class=" min-h-screen bg-slate-50 dark:bg-black dark:text-white ">
-    <header class=" bg-teal-700 text-white sticky top-0 z-10 ">
+    <header class=" bg-teal-700 text-white sticky top-0 z-10  ">
         <section class=" max-w-4xl mx-auto p-4 flex justify-between items-center ">
             <a href="#hero"><h1 class=" text-3xl font-medium ">🚀Acme Rockets</h1></a>
             <div>
-                <button id="mobile-open-button" class=" text-3xl sm:hidden focus:outline-none ">&#9776</button>
-                <nav class=" hidden sm:block space-x-8 " aria-label="main">
+                <button id="hamburger-button" class=" text-3xl md:hidden cursor-pointer ">&#9776</button>
+                <nav class=" hidden md:block space-x-8 " aria-label="main">
                     <a class=" hover:opacity-90 " href="#rockets">Our Rockets</a>
                     <a class=" hover:opacity-90 " href="#testimonial">Testimonials</a>
                     <a class=" hover:opacity-90 " href="#contact">Contact</a>
                 </nav>
             </div>
         </section>
+        <section id="mobile-view" class=" absolute top-0 text-5xl bg-black w-full flex flex-col justify-center" >
+            <button class=" text-8xl self-end ">
+                &times;
+            </button>
+        </section>
     </header>
     <main class="
     max-w-4xl mx-auto ">
-        <section id="hero" class=" scroll-mt-40 flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 ">
+        <section id="hero" class=" scroll-mt-40 flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 widescreen:section-min-height tallscreen:section-min-height ">
             <article class=" sm:w-1/2 ">
                 <h2 class=" max-w-md font-bold text-4xl sm:text-5xl sm:text-left text-slate-900 dark:text-white ">
                     We Boldly Go <span class=" text-indigo-700 dark:text-indigo-300 ">Where No Rocket </span> Has Gone Before...
@@ -35,29 +40,29 @@
                     Think Acme Rockets.
                 </p>
             </article>
-            <img class=" w-1/2 " src="./img/rocketdab.png" alt="">
+            <img class=" w-1/2 animate-pulse " src="./img/rocketdab.png" alt="">
         </section>
 
         <hr class=" mx-auto bg-black dark: bg-white w-1/2 ">
 
         <section id="rockets" class=" p-6 my-12 scroll-mt-20">
             <h2 class=" text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white ">Our Rockets</h2>
-            <ul class=" list-none mx-auto my-12 flex flex-col
-            sm:flex-row items-center gap-8 ">
+            <ul class="list-none mx-auto my-12 flex flex-col
+            sm:flex-row items-center gap-8">
                 <li class=" w-2/3 sm:w-5/6 flex flex-col items-center border border-solid dark:bg-black border-slate-900 bg-white dark:border-gray-100 py-6 px-2 rounded-3xl shadow-xl ">
-                    <img src="./img/rocketman.png" alt="Explore" class=" w-1/2 mb-6 ">
+                    <img src="./img/rocketman.png" alt="Explore" class=" animate-bounce w-1/2 mb-6 ">
                     <h3 class=" text-3xl text-center text-slate-900 dark:text-white ">Explore</h3>
                     <p class=" hidden sm:block text-3xl text-center mt-2 ">$</p>
                     <p class=" sm:hidden text-2xl text-center mt-2 text-slate-500 dark:text-slate-400">Affordable Exploration</p>
                 </li>
                 <li class=" w-2/3 sm:w-5/6 flex flex-col items-center border border-solid dark:bg-black border-slate-900 bg-white dark:border-gray-100 py-6 px-2 rounded-3xl shadow-xl ">
-                    <img src="./img/rocketride.png" alt="Explore" class=" w-1/2 mb-6 ">
+                    <img src="./img/rocketride.png" alt="Explore" class="animate-bounce w-1/2 mb-6 ">
                     <h3 class=" text-3xl text-center text-slate-900 dark:text-white ">Adventurer</h3>
                     <p class=" hidden sm:block text-3xl text-center mt-2 ">$$</p>
                     <p class=" sm:hidden text-2xl text-center mt-2 text-slate-500 dark:text-slate-400">Best Selling Rocket!</p>
                 </li>
                 <li class=" w-2/3 sm:w-5/6 flex flex-col items-center border border-solid dark:bg-black border-slate-900 bg-white dark:border-gray-100 py-6 px-2 rounded-3xl shadow-xl ">
-                    <img src="./img/rocketlaunch.png" alt="Explore" class=" w-1/2 mb-6 ">
+                    <img src="./img/rocketlaunch.png" alt="Explore" class="animate-bounce w-1/2 mb-6 ">
                     <h3 class=" text-3xl text-center text-slate-900 dark:text-white ">Infinity</h3>
                     <p class=" hidden sm:block text-3xl text-center mt-2 ">$$$</p>
                     <p class=" sm:hidden text-2xl text-center mt-2 text-slate-500 dark:text-slate-400">Luxury Starship</p>
@@ -104,9 +109,9 @@
 
         <hr class=" mx-auto bg-black dark: bg-white w-1/2 ">
 
-        <section id="contact" class=" p-6 my-12 ">
+        <section id="contact" class=" p-6 my-12 scroll-mt-14">
             <h2 class=" text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white ">Contact Us</h2>
-            <form action="" class=" max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4 ">
+            <form action="" class="   max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4 ">
                 <label for="subject">Subject</label>
                 <input type="text" id="subject" name="subject" required minlength="3" maxlength="60" placeholder="Your Subject" class=" w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none  ">
                 <label for="message">Message:</label>
@@ -116,5 +121,25 @@
             </form>
         </section>
     </main>
+    <footer class=" bg-teal-700 text-center text-white text-xl ">
+        <section class=" max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between ">
+            <address class="sm:my-8 sm:text-left">
+                <h2>Acme Rocket-Powered Product, Inc.</h2>
+                555 Astro Way <br>
+                Fairfield, New Jersey 12345-5555 <br>
+                Email: <a href="mainto:inquiries@acmerockets.com">Inquiries@AcmeRockets</a><br>
+                Phone: <a href="tel:+155555555555">(555) 555-5555</a>
+            </address>
+            <nav class=" sm:my-8 flex flex-col my-4 ">
+                <a class=" mb-2 " href="#rockets">Our Rockets</a>
+                <a class="mb-2" href="#contact">Contact Us</a>
+                <a href="#testimonial">Testimonial</a>
+            </nav>
+            <div class=" sm:my-8 ">
+                <p>Copyright &copy; <span id="year">2022</span></p>
+                <p>All Rights Reserved</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

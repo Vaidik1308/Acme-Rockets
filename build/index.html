@@ -12,7 +12,7 @@
         <section class=" max-w-4xl mx-auto p-4 flex justify-between items-center ">
             <a href="#hero"><h1 class=" text-3xl font-medium ">🚀Acme Rockets</h1></a>
             <div>
-                <button id="hamburger-button" class=" text-3xl md:hidden cursor-pointer ">&#9776</button>
+                <button onclick="sidebar()" id="hamburger-button" class=" text-3xl md:hidden cursor-pointer ">&#9776</button>
                 <nav class=" hidden md:block space-x-8 " aria-label="main">
                     <a class=" hover:opacity-90 " href="#rockets">Our Rockets</a>
                     <a class=" hover:opacity-90 " href="#testimonial">Testimonials</a>
@@ -20,10 +20,17 @@
                 </nav>
             </div>
         </section>
-        <section id="mobile-view" class=" absolute top-0 text-5xl bg-black w-full flex flex-col justify-center" >
-            <button class=" text-8xl self-end ">
+        <section id="mobile-view" class=" absolute top-0 text-5xl bg-black w-full  flex-col justify-center origin-right animate-open-menu hidden" >
+            <button onclick="removeSideBar()" class=" text-8xl self-end px-2">
                 &times;
             </button>
+            <nav class=" flex flex-col min-h-screen items-center py-6">
+                <a onclick="removeSideBar()" href="#hero" class=" w-full text-center py-6 hover:opacity-80 text-4xl ">Home</a>
+                <a onclick="removeSideBar()" href="#rockets" class=" w-full text-center py-6 hover:opacity-80 text-4xl ">Rockets</a>
+                <a onclick="removeSideBar()" href="#testimonial" class=" w-full text-center py-6 hover:opacity-80 text-4xl ">testmonials</a>
+                <a onclick="removeSideBar()" href="#contact" class=" w-full text-center py-6 hover:opacity-80 text-4xl ">Contact Us</a>
+                <a onclick="removeSideBar()" href="#footer" class=" w-full text-center py-6 hover:opacity-80 text-4xl ">Legal</a>
+            </nav>
         </section>
     </header>
     <main class="
@@ -121,7 +128,7 @@
             </form>
         </section>
     </main>
-    <footer class=" bg-teal-700 text-center text-white text-xl ">
+    <footer id="footer" class=" bg-teal-700 text-center text-white text-xl ">
         <section class=" max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between ">
             <address class="sm:my-8 sm:text-left">
                 <h2>Acme Rocket-Powered Product, Inc.</h2>
@@ -141,5 +148,6 @@
             </div>
         </section>
     </footer>
+    <script src="./js/main.js" defer></script>
 </body>
 </html>
